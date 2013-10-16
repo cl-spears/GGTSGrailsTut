@@ -7,9 +7,9 @@
 <table border="1">
 	<g:each in="${allProjects}" status="i" var="thisProject" >	
 		<tr>
-				<td>${allProjects.name}</td>  
-				<td>${allProjects.description}</td> 
-				<td>${allProjects.dueDate}</td> 
+				<td>${thisProject.name}</td>  
+				<td>${thisProject.description}</td> 
+				<td>${thisProject.dueDate}</td> 
 		</tr>
 	</g:each>
 </body>

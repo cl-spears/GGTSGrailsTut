@@ -1,9 +1,10 @@
 package projecttracker
 
 class ProjectController {
+	def scaffold = true
 
     def index = { 
-		redirect (action: current)
+		redirect (action: list)
 	}
 	
 	def current = {
