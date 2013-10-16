@@ -14,7 +14,7 @@ environments {
     development {
         dataSource {
 			//create-drop is dbCreate option
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:devDb;MVCC=TRUE"
         }
     }

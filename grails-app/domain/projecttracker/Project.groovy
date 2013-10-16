@@ -5,6 +5,7 @@ class Project {
 	String name
 	String description
 	Date dueDate
+	String billingType
 	//drop down list order use toString
 	String toString() {
 		"${name}"
@@ -12,10 +13,10 @@ class Project {
 	static belongsTo = [owner : EndUser]
 	static hasMany = [tasks : Task]
 
-    static constraints = {
-		
-		name()
+    static constraints = {		
+		name(blank: false, unique: true)
 		description()
-		dueDate()
+		dueDate(min: new Date())
+		billingType(inList: ["Hourly", "Milestone", "Non-billable"])
     }
 }
